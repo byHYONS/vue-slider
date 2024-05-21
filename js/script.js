@@ -38,10 +38,25 @@ createApp({
     data() {
        return {
          slides,
+         class: 'active',
          currentImage: 0,
        };
     },
     methods: {
+        imgPrev(){
+            if(this.currentImage < this.slides.length - 1){
+                this.currentImage++;
+            } else if(this.currentImage === this.slides.length - 1) {
+                this.currentImage = 0;
+            }
+        },
+        imgNext(){
+            if(this.currentImage > 0){
+                this.currentImage--;
+            } else if(this.currentImage === 0) {
+                this.currentImage = this.slides.length - 1;
+            }
+        }
         
     }
 

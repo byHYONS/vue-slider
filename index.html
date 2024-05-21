@@ -29,11 +29,11 @@
                 <!-- miniature -->
                 <div class="thumbs">
                     <!-- bottoni -->
-                    <div class="prev"></div>
-                    <div class="next"></div>
+                    <div @click="imgPrev" class="prev"></div>
+                    <div @click="imgNext" class="next"></div>
                     <!-- /bottoni -->
                     <div v-for="(thumb, index) in slides" :key="index">
-                        <div class="thumb active">
+                        <div class="thumb" >
                             <img :src="thumb.image" :alt="thumb.title" />
                         </div>
                     </div>
