@@ -38,8 +38,8 @@ createApp({
     data() {
        return {
          slides,
-         class: 'active',
          currentImage: 0,
+         timer: 3,
        };
     },
     methods: {
@@ -56,8 +56,22 @@ createApp({
             } else if(this.currentImage === 0) {
                 this.currentImage = this.slides.length - 1;
             }
-        }
-        
-    }
+        },
+        selectImg(val){
+            this.currentImage = val
+        },
+        startAutoplay() {
+            this.timer = setInterval(() => {
+                this.imgPrev(); 
+            }, this.timer * 1_000);
+        },
+        resetTimer() {
+            clearInterval(this.timer);
+            this.startAutoplay();
+        },
+    },
+    mounted() {
+        this.startAutoplay();
+    },
 
 }).mount('#app');
