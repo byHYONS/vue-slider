@@ -39,7 +39,8 @@ createApp({
        return {
          slides,
          currentImage: 0,
-         timer: 3,
+         sec: 3,
+         timer: null,
        };
     },
     methods: {
@@ -63,15 +64,12 @@ createApp({
         startAutoplay() {
             this.timer = setInterval(() => {
                 this.imgPrev(); 
-            }, this.timer * 1_000);
-        },
-        resetTimer() {
-            clearInterval(this.timer);
-            this.startAutoplay();
+            }, this.sec * 1_000);
         },
     },
     mounted() {
         this.startAutoplay();
+        
+    
     },
-
 }).mount('#app');

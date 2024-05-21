@@ -16,5 +16,3 @@ applicare l'autoplay allo slider: ogni 3 secondi, cambia immagine automaticament
 #### Bonus 3:
 quando il mouse va in hover sullo slider, bloccare l'autoplay e farlo riprendere quando esce.
 
-## Svolgimento:
-1. 
