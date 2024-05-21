@@ -2,7 +2,7 @@
 'use strict';
 
 /* *******************************
-         ARREY D'OGGETTI
+            VARIABILI
 ******************************* */
 
 const slides = [
@@ -29,4 +29,20 @@ const slides = [
     }
 ];
 
-console.log(slides);
+const {createApp} = Vue;
+
+/* *******************************
+        INIZIALIZZO VUE JS
+******************************* */
+createApp({
+    data() {
+       return {
+         slides,
+         currentImage: 0,
+       };
+    },
+    methods: {
+        
+    }
+
+}).mount('#app');
