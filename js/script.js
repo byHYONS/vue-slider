@@ -66,6 +66,10 @@ createApp({
                 this.imgPrev(); 
             }, this.sec * 1_000);
         },
+        stopImg(){
+            clearInterval(this.timer);
+            this.timer = null;
+        }
     },
     mounted() {
         this.startAutoplay();
