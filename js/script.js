@@ -62,6 +62,7 @@ createApp({
             this.currentImage = val
         },
         startAutoplay() {
+            if(this.timer) return
             this.timer = setInterval(() => {
                 this.imgPrev(); 
             }, this.sec * 1_000);
